@@ -1,4 +1,4 @@
-<?php include "/opt/lampp/htdocs/public_html/portfolio/app/template/header.php"; ?>
+<?php include "/opt/lampp/htdocs/public_html/portfolio/template/header.php"; ?>
 <header>
     <!-- Code injected from javascript... -->
 </header>
@@ -21,20 +21,15 @@
         </div>
     </div>
 
-    <div class="my-experience">
-        <span class="index-span">experience</span>
-        <div id="experience" class="experience-css"><!-- Code injected from javascript... --></div>
-    </div>
-
     <div id="my-project">
         <span class="index-span">project</span>
         <div id="project" class="project-css"><!-- Code injected from javascript... --></div>
     </div>
 
-    <div id="my-works">
-        <span class="index-span">works</span>
-        <div id="works" class="works-css"><!-- Code injected from javascript... --></div>
+    <div id="my-design">
+        <span class="index-span">design</span>
+        <div id="design" class="design-css"><!-- Code injected from javascript... --></div>
     </div>
 
 </main>
-<?php include "/opt/lampp/htdocs/public_html/portfolio/app/template/footer.php"; ?>
+<?php include "/opt/lampp/htdocs/public_html/portfolio/template/footer.php"; ?>

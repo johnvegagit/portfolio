@@ -235,68 +235,6 @@ main {
 
     }
 
-    & .my-experience{
-        margin-bottom: 40px;
-
-        & .experience-css{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 10px;
-            justify-content: space-between;
-            align-items: start;
-
-            /** from js **/
-            .experience-js{
-                padding: 15px;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                justify-content: start;
-                align-items: start;
-                border: 1px solid var(--index-brd-color);
-                border-radius: 5px;
-                overflow: auto;
-
-                /** from js **/
-                & h2{
-                    height: 58px;
-                    overflow: hidden;
-                }
-
-                /** from js **/
-                & ul{
-                    height: 100px;
-                    padding: 0px 0px 0px 15px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 7px;
-                    overflow: hidden;
-
-                    & li {font-size: var(--index-fnt-size-15px);}
-                }
-
-                /** from js **/
-                & button {
-                    border: none;
-                    background: none;
-                    cursor: pointer;
-                    font-size: var(--index-fnt-size-15px);
-                }
-
-                & button:hover, i {
-                    color: var(--index-fnt-hvr-color);
-                    transition: .3s ease;
-                }
-            }
-
-            .experience-js:hover{
-                background-color: var(--index-bck-hvr-color);
-                transition: .3s ease;
-            }
-        }
-    }
-
     & #my-project{
         margin-bottom: 40px;
 
@@ -329,24 +267,18 @@ main {
                 }
 
                 & a:hover{
-                    /* color: var(--index-bck-btn-color); */
                     transition: .3s ease;
                     text-decoration: underline;
                     background-color: var(--index-bck-hvr-color);
-                    /*
-                    & i{
-                        color: var(--index-bck-btn-color);
-                        transition: .3s ease;
-                    }**/
                 }
             }
         }
     }
 
-    & #my-works{
+    & #my-design{
         margin-bottom: 40px;
 
-        & .works-css{
+        & .design-css{
             width: 100%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -354,72 +286,36 @@ main {
             justify-content: space-between;
             align-items: start;
 
-            & .works-js{
+            & .design-js{
                 width: 100%;
                 border: 1px solid var(--index-brd-color);
                 border-radius: 5px;
                 overflow: hidden;
 
-                & .works-img-js {
+                & .design-img-js {
                     width: 100%;
                     justify-content: center;
-                    padding: 20px;
+                    padding: 20px 20px 0px 20px;
                 }
 
-                & .works-info{
-                    width: 100%;
-                    padding: 20px;
+                & .design-link{
                     display: flex;
-                    gap: 5px;
-                    justify-content: space-between;
+                    gap: 15px;
+                    justify-content: start;
                     align-items: center;
-                    border-top: 1px solid var(--index-brd-color);
-
-                    & .a-works-img-icon{
-                        display: flex;
-                        gap: 5px;
-                        justify-content: space-between;
-                        align-items: center;
-                        text-decoration: none;
-
-                        & .works-img-icon{
-                            width: 20px;
-                            height: 20px;
-                            border-radius: 50px;
-                            background-color: #D3D3D3;
-                            overflow: hidden;
-                        }
-
-                    }
-                    
-                    & .a-works-img-icon:hover{
-                        text-decoration: underline;
-                    }
-
-                    & .a-works-img-case-study{
-                        & .bi-eye-fill {
-                            font-size: 20px;
-                        }
-                    }
-
-                    & .a-works-img-case-study:hover{
-                        & .bi-eye-fill {
-                            color: var(--index-bck-btn-color);
-                            transition: .3s ease;
-                        }
-                    }
+                    text-decoration: none;
+                    padding: 20px 0px 20px 20px;
                 }
 
-                & .works-info:hover{
-                    background-color: var(--index-bck-hvr-color);
-                    transition: .3s ease;
+                & .design-link:hover{
+                    color: var(--index-fnt-hvr-color);
+                    text-decoration: underline;
                 }
             }
 
-            @media screen and (max-width: 360px) {
-                .works-js{
-                    width: 340px;
-                }
+            & .design-js:hover{
+                background-color: var(--index-bck-hvr-color);
+                transition: .3s ease;
             }
         }
     }
@@ -434,7 +330,7 @@ main {
     height: auto;
 }
 
-/** experience,project,works **/
+/** experience,project **/
 .index-span{
     display: inline-block;
     font-size: var(--index-fnt-size-18px);
@@ -481,9 +377,3 @@ footer{
     }
 }
 /** ========== footer end ========== **/
-
-/** ========== start ========== **/
-/** ========== end ========== **/
-
-/** ========== start ========== **/
-/** ========== end ========== **/

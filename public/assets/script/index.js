@@ -17,7 +17,6 @@ function checkWindow() {
         showHeaderDesktop();
         document.querySelector("body").style.padding = "0px 40px";
         document.querySelector("main").style.paddingTop = "40px";
-        // document.querySelector('.works-js').style.Width = "290px";
     }
 }
 
@@ -191,66 +190,6 @@ for (let i = 0; i < learningObj.length; i++) {
 }
 document.getElementById("learning").innerHTML = learningHTML;
 
-// experience...
-const experiences = [
-    {
-        title: "Front-End Web Developer ALFANUMERIC S.A.",
-        subtitle_1: "<li>Developed responsive websites using HTML, CSS, JavaScript and Bootstrap.</li>",
-        subtitle_2: "<li>Worked with Visual Studio, SASS, C#, razor pages and ASP.NET.</li>",
-    },
-
-    {
-        title: "Full-stack Free-lance web Development",
-        subtitle_1: "<li>Developed responsive websites using HTML, CSS, JavaScript and Bootstrap.</li>",
-        subtitle_2: "<li>Worked gaspi Studio, SASS, C#, razor pages and ASP.NET.</li>",
-    },
-
-    {
-        title: "Full-stack Free-lance web Development",
-        subtitle_1: "<li>Developed responsive websites using HTML, CSS, JavaScript and Bootstrap.</li>",
-        subtitle_2: "<li>Worked gaspi Studio, SASS, C#, razor pages and ASP.NET.</li>",
-        subtitle_3: "<li>Worked gaspi Studio, SASS, C#, razor pages and ASP.NET.</li>",
-    }
-];
-
-let expHTML = "";
-let idCount = 0;
-
-for (let i = 0; i < experiences.length; i++) {
-    const exp = experiences[i];
-    idCount++;
-    expHTML += `
-        <div class="experience-js" data-id="${idCount}">
-            <h2>${exp.title}</h2>
-            <ul class="read-more-ul" data-ul="${idCount}" >${exp.subtitle_1}${exp.subtitle_2}${exp.subtitle_3}</ul>
-            <button class="read-more-btn" data-id="${idCount}">read more <i class="bi bi-chevron-down"></i></button>
-        </div>
-    `;
-}
-document.getElementById("experience").innerHTML = expHTML;
-
-// Read more...
-const readMoreBtns = document.querySelectorAll(".read-more-btn");
-
-readMoreBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const parent = btn.parentNode;
-        readMore(parent);
-    });
-});
-
-function readMore(parent) {
-    const parentUl = parent.querySelector('ul').clientHeight;
-    console.log(parentUl);
-    if (parentUl === 100) {
-        parent.querySelector("ul").style.height = "auto";
-        parent.querySelector("button").innerHTML = `read more <i class="bi bi-chevron-up"></i>`;
-    } else {
-        parent.querySelector("ul").style.height = "100px";
-        parent.querySelector("button").innerHTML = `read more <i class="bi bi-chevron-down"></i>`;
-    }
-}
-
 // project...
 const projects = [
     {
@@ -284,64 +223,53 @@ for (let i = 0; i < projects.length; i++) {
 }
 document.getElementById("project").innerHTML = projectHTML;
 
-// works...
-const worksObj = [
-    {
-        imgUrl: imgUrl + "works/work-01.png",
-        alt: "image alt name",
-        title: "jensipiñatas.com",
-        url: "https://github.com/",
-        caseStudy: "https://github.com/",
-        icon_1: "<i class='bi bi-arrow-up-right'></i>",
-        icon_2: "<i class='bi bi-eye-fill'></i>",
+// My Design...
+const DesignObj = [
+    {   
+        imgUrl: imgUrl + "design/work-01.png",
+        alt: "The esxpreso company",
+        title: "The expreso company",
+        url: "https://dribbble.com",
+        icon: "<i class='bi bi-arrow-up-right'></i>"
     },
 
     {
-        imgUrl: imgUrl + "works/work-02.png",
-        alt: "image alt name",
-        title: "jensipiñatas.com",
-        url: "https://github.com/",
-        caseStudy: "https://github.com/",
-        icon_1: "<i class='bi bi-arrow-up-right'></i>",
-        icon_2: "<i class='bi bi-eye-fill'></i>",
+        imgUrl: imgUrl + "design/work-02.png",
+        alt: "Jensy piñatas",
+        title: "Jensy piñatas",
+        url: "https://dribbble.com",
+        icon: "<i class='bi bi-arrow-up-right'></i>"
     },
 
     {
-        imgUrl: imgUrl + "works/work-03.png",
-        alt: "image alt name",
-        title: "jensipiñatas.com",
-        url: "https://github.com/",
-        caseStudy: "https://github.com/",
-        icon_1: "<i class='bi bi-arrow-up-right'></i>",
-        icon_2: "<i class='bi bi-eye-fill'></i>",
+        imgUrl: imgUrl + "design/work-03.png",
+        alt: "Redisign Curacao nicaragua",
+        title: "Redisign Curacao nicaragua",
+        url: "https://dribbble.com",
+        icon: "<i class='bi bi-arrow-up-right'></i>"
     },
 
     {
-        imgUrl: imgUrl + "works/work-04.png",
-        alt: "image alt name",
-        title: "jensipiñatas.com",
-        url: "https://github.com/",
-        caseStudy: "https://github.com/",
-        icon_1: "<i class='bi bi-arrow-up-right'></i>",
-        icon_2: "<i class='bi bi-eye-fill'></i>",
+        imgUrl: imgUrl + "design/work-04.png",
+        alt: "Pagina web de Viajes",
+        title: "Pagina web de Viajes",
+        url: "https://dribbble.com",
+        icon: "<i class='bi bi-arrow-up-right'></i>"
     },
-
 ];
 
-let worksHTML = "";
-for (let i = 0; i < worksObj.length; i++) {
-    const works = worksObj[i];
-    worksHTML += `
-        <div class="works-js">
-            <img class="works-img-js" src="${works.imgUrl}" alt="${works.alt}" sizes="246w" width="246">
-            <div class="works-info">
-                <a class="a-works-img-icon" href="${works.url}" ><img class="works-img-icon" src="" alt="" sizes="5w" width="5px"> ${works.title} ${works.icon_1}</a>
-                <a class="a-works-img-case-study" href="${works.caseStudy}" >${works.icon_2}</a>
-            </div>
-        </div>
+let designHtml = "";
+for (let i = 0; i < DesignObj.length; i++) {
+    const designs = DesignObj[i];
+    console.log(designs);
+    designHtml += `
+    <div class="design-js">
+        <img class="design-img-js" src="${designs.imgUrl}" alt="${designs.alt}" sizes="246w" width="246">
+        <a class="design-link" href="${designs.url}">${designs.title} ${designs.icon}</a>
+    </div>
     `;
 }
-document.getElementById("works").innerHTML = worksHTML;
+document.getElementById('design').innerHTML = designHtml;
 
 // My contact...
 const contactObj = [
@@ -365,12 +293,6 @@ const contactObj = [
         url: imgUrl + "icon/github.png",
         link: "https://github.com/"
     },
-
-    /*{
-        name: "hello@johnvega.dev",
-        alt: "hello@johnvega.dev",
-        url:  imgUrl + "icon/email.png"
-    },*/
 ];
 
 let contactHTML = "";
