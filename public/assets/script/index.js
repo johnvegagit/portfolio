@@ -52,10 +52,9 @@ function showHeaderDesktop() {
 
 // About me...
 document.getElementById("about").innerHTML = `
-    <ul>
-        <li>Hello, my name John Wesley Lopez Vega a full-stack web developer & ux ui designer with 3 years of experience. Born in 1997 Bluefields Nicaragua.</li>
-        <li>Bachelor as a Full-Stack web Developer & ux/ui Designer University of the Internet 2020 - Present</li>
-    </ul>
+    <p>¡Hola! Soy John Wesley López Vega, un desarrollador web full-stack autodidacta con experiencia desde 2021.</p>
+    <p>Durante los últimos cuatro años, he explorado tecnologías como JavaScript y PHP, creando proyectos personales que demuestran mi capacidad para desarrollar aplicaciones web.</p>
+    <p>Estoy entusiasmado con la colaboración en la industria del desarrollo web y actualmente estoy ampliando mis habilidades en Composer para una gestión de dependencias más eficiente. Además, estoy profundizando en la programación orientada a objetos en PHP para escribir código más estructurado y reutilizable.</p>
 `;
 
 // My skills...
@@ -103,12 +102,6 @@ const skillsObj = [
     },
 
     {
-        name: "FIGMA",
-        alt: "FIGMA",
-        url: imgUrl + "icon/figma.png",
-    },
-
-    {
         name: "VS CODE",
         alt: "VS CODE",
         url: imgUrl + "icon/vscode.png",
@@ -126,22 +119,16 @@ document.getElementById("skills").innerHTML = skillsHTML;
 
 // I'm learning...
 const learningObj = [
-    {
-        name: "GRAPHQL",
-        alt: "GRAPHQL",
-        url: imgUrl + "icon/graphql.png",
-    },
+    /*{
+        name: "PYTHON",
+        alt: "PYTHON",
+        url: imgUrl + "icon/python.png",
+    },*/
 
     {
-        name: "BASH SCRIPT",
-        alt: "BASH SCRIPT",
+        name: "BASH",
+        alt: "BASH",
         url: imgUrl + "icon/bash.png",
-    },
-
-    {
-        name: "REDIS",
-        alt: "REDIS",
-        url: imgUrl + "icon/redis.png",
     },
 
     {
@@ -157,28 +144,16 @@ const learningObj = [
     },
 
     {
-        name: "MONGODB",
-        alt: "MONGODB",
-        url: imgUrl + "icon/mongodb.png",
+        name: "NANO",
+        alt: "NANO",
+        url: imgUrl + "icon/nano.png",
     },
 
     {
-        name: "DOCKER",
-        alt: "DOCKER",
-        url: imgUrl + "icon/docker.png",
-    },
-
-    {
-        name: "KUBERNETES",
-        alt: "KUBERNETES",
-        url: imgUrl + "icon/kubernetes.png",
-    },
-
-    {
-        name: "DOCTRINE ORM",
-        alt: "DOCTRINE ORM",
-        url: imgUrl + "icon/doctrine.png",
-    },
+        name: "LINUX",
+        alt: "LINUX",
+        url: imgUrl + "icon/linux.png",
+    }
 ];
 
 let learningHTML = "";
@@ -193,19 +168,13 @@ document.getElementById("learning").innerHTML = learningHTML;
 // project...
 const projects = [
     {
-        title: "Ejercicio simple de una peticion post a través de php con ajax",
+        title: "php mvc framework (oop)",
         url: "https://github.com/",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     },
 
     {
-        title: "Ejercicio simple de una peticion post a través de php con ajax",
-        url: "https://github.com/",
-        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
-    },
-
-    {
-        title: "Ejercicio simple de una peticion post a través de php con ajax",
+        title: "php login system (oop,mvc)",
         url: "https://github.com/",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     }
@@ -223,75 +192,20 @@ for (let i = 0; i < projects.length; i++) {
 }
 document.getElementById("project").innerHTML = projectHTML;
 
-// My Design...
-const DesignObj = [
-    {   
-        imgUrl: imgUrl + "design/work-01.png",
-        alt: "The esxpreso company",
-        title: "The expreso company",
-        url: "https://dribbble.com",
-        icon: "<i class='bi bi-arrow-up-right'></i>"
-    },
-
-    {
-        imgUrl: imgUrl + "design/work-02.png",
-        alt: "Jensy piñatas",
-        title: "Jensy piñatas",
-        url: "https://dribbble.com",
-        icon: "<i class='bi bi-arrow-up-right'></i>"
-    },
-
-    {
-        imgUrl: imgUrl + "design/work-03.png",
-        alt: "Redisign Curacao nicaragua",
-        title: "Redisign Curacao nicaragua",
-        url: "https://dribbble.com",
-        icon: "<i class='bi bi-arrow-up-right'></i>"
-    },
-
-    {
-        imgUrl: imgUrl + "design/work-04.png",
-        alt: "Pagina web de Viajes",
-        title: "Pagina web de Viajes",
-        url: "https://dribbble.com",
-        icon: "<i class='bi bi-arrow-up-right'></i>"
-    },
-];
-
-let designHtml = "";
-for (let i = 0; i < DesignObj.length; i++) {
-    const designs = DesignObj[i];
-    console.log(designs);
-    designHtml += `
-    <div class="design-js">
-        <img class="design-img-js" src="${designs.imgUrl}" alt="${designs.alt}" sizes="246w" width="246">
-        <a class="design-link" href="${designs.url}">${designs.title} ${designs.icon}</a>
-    </div>
-    `;
-}
-document.getElementById('design').innerHTML = designHtml;
-
 // My contact...
 const contactObj = [
-    {
-        name: "dribbble",
-        alt: "dribbble",
-        url: imgUrl + "icon/dribbble.png",
-        link: "https://dribbble.com/"
-    },
-
     {
         name: "linkedin",
         alt: "linkedin",
         url: imgUrl + "icon/linkedin.png",
-        link: "https://linkedin.com/"
+        link: "https://www.linkedin.com/in/johnvegadev/"
     },
 
     {
         name: "github",
         alt: "github",
         url: imgUrl + "icon/github.png",
-        link: "https://github.com/"
+        link: "https://github.com/johnvegagit"
     },
 ];
 
