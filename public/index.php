@@ -1,28 +1,28 @@
 <?php include "/opt/lampp/htdocs/public_html/portfolio/template/header.php"; ?>
-<header></header>
+<header>
+
+</header>
 <main>
-
-    <h1>FULL-STACK WEB DEVELOPER</h1>
-
-    <div class="my-about">
-        <div class="my-about-cont-css">
-            <span class="index-my-about">about</span>
-            <div id="about"></div>
+    <section id="about">
+        <div class="about-header">
+            <h1>WEB DEVELOPER</h1>
+            <span class="span-index">about</span>
         </div>
-        <div class="my-about-cont-css">
-            <span class="index-my-about">skills</span>
+        <div class="about-main"></div>
+    </section>
+    <section id="project">
+        <span class="span-index">project</span>
+    </section>
+    <section id="skils-learn">
+        <section class="skills">
+            <span class="span-index">skills</span>
             <div id="skills"></div>
-        </div>
-        <div class="my-about-cont-css">
-            <span class="index-my-about">learning</span>
+        </section>
+        <section class="learning">
+            <span class="span-index">learning</span>
             <div id="learning"></div>
-        </div>
-    </div>
-
-    <div id="my-project">
-        <span class="index-span">project</span>
-        <div id="project" class="project-css"></div>
-    </div>
-
+        </section>
+    </section>
 </main>
+
 <?php include "/opt/lampp/htdocs/public_html/portfolio/template/footer.php"; ?>

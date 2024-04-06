@@ -8,14 +8,14 @@ const userData = {
 
 function checkWindow() {
     const windowWidth = window.innerWidth;
-    if (windowWidth <= 360) {
+    if (windowWidth <= 1000) {
         showHeaderMobile();
-        document.querySelector("main").style.paddingTop = "40px ";
-        document.querySelector("body").style.padding = "0px 10px";
+        document.querySelector("body").style.padding = "10px";
+        document.querySelector("main").style.paddingTop = "10px";
         
     } else {
         showHeaderDesktop();
-        document.querySelector("body").style.padding = "0px 40px";
+        document.querySelector("body").style.padding = "40px";
         document.querySelector("main").style.paddingTop = "40px";
     }
 }
@@ -26,12 +26,12 @@ function showHeaderMobile() {
     const urlProfile = "http://localhost/public_html/portfolio/public/assets/images/profile/photo.jpg";
     document.querySelector("header").innerHTML = `
     <div class="profile">
-        <a href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
+        <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
         <h2>${userData.name}</h2>
     </div>
     <div class="status-cvc">
-        <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase"></i></span>
-        <a href="#" class="download-cvc" download="" title="descargar mi cvc"><i class="bi bi-cloud-arrow-down"></i> cvc</a> 
+        <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
+        <a href="#" class="download-cvc" download="" title="descargar mi cvc"><i class="bi bi-file-text"></i> cvc</a> 
     </div>
     `;
 }
@@ -40,21 +40,28 @@ function showHeaderDesktop() {
     const urlProfile = "http://localhost/public_html/portfolio/public/assets/images/profile/photo.jpg";
     document.querySelector("header").innerHTML = `
     <div class="profile">
-        <a href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
-        <div>
-            <h2>${userData.name}</h2>
-            <span class="current-status"> <span class="status-dot"></span> Available for work</span>
-        </div>
+        <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
+        <h2>${userData.name}</h2>
     </div>
-    <a href="#" class="download-cvc" download >download cvc</a>
+    <ul id="nav-link-menu">
+        <li><a class="header-menu-link" href="#" ><i class="bi bi-github"></i></a></li>
+        <li><a class="header-menu-link" href="" ><i class="bi bi-linkedin"></i></a></li>
+        <li><a class="header-menu-link" href="#" ><i class="bi bi-envelope-at-fill"></i></a></li>
+    </ul>
+    <div class="status-cvc">
+        <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
+        <a href="#" class="download-cvc" download="" title="descargar mi cvc"><i class="bi bi-file-text"></i> cvc</a> 
+    </div>
     `;
 }
 
 // About me...
-document.getElementById("about").innerHTML = `
-    <p>¡Hola! Soy John Wesley López Vega, un desarrollador web full-stack autodidacta con experiencia desde 2021.</p>
-    <p>Durante los últimos cuatro años, he explorado tecnologías como JavaScript y PHP, creando proyectos personales que demuestran mi capacidad para desarrollar aplicaciones web.</p>
-    <p>Estoy entusiasmado con la colaboración en la industria del desarrollo web y actualmente estoy ampliando mis habilidades en Composer para una gestión de dependencias más eficiente. Además, estoy profundizando en la programación orientada a objetos en PHP para escribir código más estructurado y reutilizable.</p>
+document.querySelector(".about-main").innerHTML = `
+    <p>¡Hola! Soy John Wesley López Vega, un desarrollador web full-stack autodidacta con experiencia desde 2021. </p>
+    <p> Durante los últimos cuatro años, he explorado tecnologías como JavaScript y PHP, creando proyectos personales que demuestran mi capacidad para desarrollar aplicaciones web. </p>
+    <p> Estoy entusiasmado con la colaboración en la industria del desarrollo web y actualmente estoy ampliando mis
+        habilidades en Composer para una gestión de dependencias más eficiente. Además, estoy profundizando en la
+        programación orientada a objetos en PHP para escribir código más estructurado y reutilizable.</p>
 `;
 
 // My skills...
@@ -164,7 +171,7 @@ for (let i = 0; i < learningObj.length; i++) {
     `;
 }
 document.getElementById("learning").innerHTML = learningHTML;
-
+/*
 // project...
 const projects = [
     {
@@ -216,4 +223,4 @@ for (let i = 0; i < contactObj.length; i++) {
         <a href="${contact.link}"><span class="contact-item"><img src="${contact.url}" size="20w" > ${contact.name}</span></a> 
     `;
 }
-document.getElementById("contact").innerHTML = contactHTML;
+document.getElementById("contact").innerHTML = contactHTML;*/

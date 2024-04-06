@@ -1,10 +1,13 @@
-    <footer>
-        <div id="my-contact">
-            <span class="index-span">contact</span>
-            <div id="contact" class="contact-css"><!-- Code injected from javascript... --></div>
-            <a href="mailto:hello@johnvega.com"><span class="contact-item-email"><img src="http://localhost/public_html/portfolio/public/assets/images/icon/email.png" size="20w">hello@johnvega.dev</span></a>
-        </div>
-        <span>johnvega.dev © <?php echo date('Y');?></span>
-    </footer>
+<footer>
+    <span>johnvega.dev ©
+        <?php echo date('Y'); ?>
+    </span>
+    <ul id="nav-link-menu">
+        <li><a class="header-menu-link" href="#"><i class="bi bi-github"></i></a></li>
+        <li><a class="header-menu-link" href=""><i class="bi bi-linkedin"></i></a></li>
+        <li><a class="header-menu-link" href="#"><i class="bi bi-envelope-at-fill"></i></a></li>
+    </ul>
+</footer>
 </body>
+
 </html>
