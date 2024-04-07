@@ -33,7 +33,7 @@ function showHeaderMobile() {
     </div>
     <div class="status-cvc">
         <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="#" class="download-cvc" download="" title="descargar mi cvc"><i class="bi bi-file-text"></i> cvc</a> 
+        <a href="#" class="download-cvc" download="" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
     </div>
     `;
 }
@@ -54,7 +54,7 @@ function showHeaderDesktop() {
     </ul>
     <div class="status-cvc">
         <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="#" class="download-cvc" download="" title="descargar mi cvc"><i class="bi bi-file-text"></i> cvc</a> 
+        <a href="#" class="download-cvc" download="" title="descargar mi cv"><i class="bi bi-file-text"></i> cv</a> 
     </div>
     `;
 }
