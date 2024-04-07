@@ -1,4 +1,4 @@
-const imgUrl = "http://localhost/public_html/portfolio/public/assets/images/";
+const imgUrl = "http://localhost/public_html/portfolio/images/";
 
 const userData = {
     name: "john vega",
@@ -23,7 +23,7 @@ function checkWindow() {
 checkWindow(addEventListener("resize", checkWindow));
 
 function showHeaderMobile() {
-    const urlProfile = "http://localhost/public_html/portfolio/public/assets/images/profile/photo.jpg";
+    const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
     document.querySelector("header").innerHTML = `
     <div class="profile">
         <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
@@ -37,7 +37,7 @@ function showHeaderMobile() {
 }
 
 function showHeaderDesktop() {
-    const urlProfile = "http://localhost/public_html/portfolio/public/assets/images/profile/photo.jpg";
+    const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
     document.querySelector("header").innerHTML = `
     <div class="profile">
         <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
@@ -140,12 +140,6 @@ document.getElementById("skills").innerHTML = skillsHTML;
 
 // I'm learning...
 const learningObj = [
-    /*{
-        name: "PYTHON",
-        alt: "PYTHON",
-        url: imgUrl + "icon/python.png",
-    },*/
-
     {
         name: "BASH",
         alt: "BASH",
@@ -217,3 +211,7 @@ for (let i = 0; i < projects.length; i++) {
     `;
 }
 document.getElementById("project").innerHTML = projectHTML;
+
+// Get year for footer...
+const year = new Date().getFullYear();
+document.getElementById('year').textContent = year;
