@@ -44,9 +44,10 @@ function showHeaderDesktop() {
         <h2>${userData.name}</h2>
     </div>
     <ul id="nav-link-menu">
-        <li><a class="header-menu-link" href="#" ><i class="bi bi-github"></i></a></li>
-        <li><a class="header-menu-link" href="" ><i class="bi bi-linkedin"></i></a></li>
-        <li><a class="header-menu-link" href="#" ><i class="bi bi-envelope-at-fill"></i></a></li>
+        <li><a class="header-menu-link" href="https://github.com/johnvegagit" ><i class="bi bi-github"></i></a></li>
+        <li><a class="header-menu-link" href="https://www.linkedin.com/in/johnvegadev/" ><i class="bi bi-linkedin"></i></a></li>
+        <li><a class="header-menu-link" href="mailto:johnvegauser@gmail.com"><i class="bi bi-envelope-at-fill"></i></a>
+        </li>
     </ul>
     <div class="status-cvc">
         <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
@@ -57,11 +58,24 @@ function showHeaderDesktop() {
 
 // About me...
 document.querySelector(".about-main").innerHTML = `
-    <p>¡Hola! Soy John Wesley López Vega, un desarrollador web full-stack autodidacta con experiencia desde 2021. </p>
-    <p> Durante los últimos cuatro años, he explorado tecnologías como JavaScript y PHP, creando proyectos personales que demuestran mi capacidad para desarrollar aplicaciones web. </p>
-    <p> Estoy entusiasmado con la colaboración en la industria del desarrollo web y actualmente estoy ampliando mis
-        habilidades en Composer para una gestión de dependencias más eficiente. Además, estoy profundizando en la
-        programación orientada a objetos en PHP para escribir código más estructurado y reutilizable.</p>
+<p>
+¡Hola! Soy John Wesley López Vega, un desarrollador web full-stack autodidacta con más de cuatro años de experiencia. Desde 2021, he estado inmerso en el fascinante mundo del desarrollo web, explorando tecnologías como JavaScript y PHP.
+</p>
+<p>
+Durante mi trayectoria, he trabajado en una variedad de proyectos personales que han sido fundamentales para mi desarrollo profesional. Estos proyectos no solo han consolidado mis habilidades técnicas, sino que también han demostrado mi capacidad para crear aplicaciones web funcionales y atractivas.
+</p>
+<p>
+Actualmente, mi enfoque se centra en mejorar mis habilidades en la gestión de dependencias mediante el uso de Composer. Estoy convencido de que una gestión de dependencias eficiente es esencial para la productividad y el mantenimiento de proyectos a largo plazo.
+</p>
+<p>
+Además, me encuentro inmerso en el aprendizaje de la programación orientada a objetos en PHP. Reconozco la importancia de escribir código estructurado y reutilizable, y estoy comprometido en profundizar mis conocimientos en este ámbito.
+</p>
+<p>
+Por último, aunque no menos importante, me encanta explorar el mundo de Linux y su potencial en el desarrollo web. Actualmente, estoy familiarizándome con herramientas como BASH y NANO, las cuales me permiten trabajar de manera más eficiente y potenciar mis habilidades como desarrollador.
+</p>
+<p>
+Estoy emocionado por las oportunidades de colaboración en la industria del desarrollo web y estoy ansioso por seguir ampliando mis conocimientos y habilidades en este apasionante campo.
+</p>
 `;
 
 // My skills...
@@ -171,18 +185,23 @@ for (let i = 0; i < learningObj.length; i++) {
     `;
 }
 document.getElementById("learning").innerHTML = learningHTML;
-/*
+
 // project...
 const projects = [
     {
-        title: "php mvc framework (oop)",
-        url: "https://github.com/",
+        title: "php mvc framework (oop,mvc)",
+        url: "https://github.com/johnvegagit/php-mvc-framework",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     },
 
     {
         title: "php login system (oop,mvc)",
-        url: "https://github.com/",
+        url: "https://github.com/johnvegagit/php-login-system-oop-mvc",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+    },
+    {
+        title: "task management system (oop,mvc)",
+        url: "https://github.com/johnvegagit/Task-Management-System",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     }
 ];
@@ -198,29 +217,3 @@ for (let i = 0; i < projects.length; i++) {
     `;
 }
 document.getElementById("project").innerHTML = projectHTML;
-
-// My contact...
-const contactObj = [
-    {
-        name: "linkedin",
-        alt: "linkedin",
-        url: imgUrl + "icon/linkedin.png",
-        link: "https://www.linkedin.com/in/johnvegadev/"
-    },
-
-    {
-        name: "github",
-        alt: "github",
-        url: imgUrl + "icon/github.png",
-        link: "https://github.com/johnvegagit"
-    },
-];
-
-let contactHTML = "";
-for (let i = 0; i < contactObj.length; i++) {
-    const contact = contactObj[i];
-    contactHTML += ` 
-        <a href="${contact.link}"><span class="contact-item"><img src="${contact.url}" size="20w" > ${contact.name}</span></a> 
-    `;
-}
-document.getElementById("contact").innerHTML = contactHTML;*/

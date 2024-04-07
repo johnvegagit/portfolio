@@ -128,15 +128,6 @@ header {
             border: 1px solid var(--index-brd-color);
         }
 
-        & .current-status:hover {
-
-            /** CURRENT STATUS **/
-            background-color: var(--index-scn-1-color);
-            border: 1px solid var(--index-scn-1-color);
-            /** CURRENT STATUS **/
-            transition: .3s ease;
-        }
-
     }
 }
 
@@ -269,12 +260,48 @@ main {
         }
     }
 
-    & #project{
+    & #my-project{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         padding: 20px;
         border: 1px solid var(--index-brd-color);
         border-radius: 5px;
         grid-column: 2;
         grid-row: 1 / span 2;
+
+        & #project{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 15px;
+
+            & .project-js{
+                width: 100%;
+                border: 1px solid var(--index-brd-color);
+                border-radius: 5px;
+                overflow: hidden;
+
+                & h2 {
+                    padding: 15px;
+                    font-size: var(--index-fnt-size-18px);
+                    font-weight: var(--index-fnt-weight);
+                }
+
+                & a{
+                    display: flex;
+                    gap: 10px;
+                    padding: 15px;
+                    border-top: 1px solid var(--index-brd-color);
+                    text-decoration: none;
+                }
+
+                & a:hover{
+                    transition: .3s ease;
+                    text-decoration: underline;
+                    background-color: var(--index-bck-hvr-color);
+                }
+            }
+        }
     }
 
     & #skils-learn{
@@ -331,7 +358,7 @@ footer{
             grid-column: unset;
         }
     
-        & #project{
+        & #my-project{
             padding: 10px;
             grid-column: unset;
             grid-row: unset;
@@ -357,4 +384,12 @@ footer{
     }
 }
 
-
+@media screen and (max-width: 370px) {
+    main{
+    & #my-project{
+            & #project{
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            }
+        }
+    }
+}

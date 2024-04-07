@@ -1,4 +1,7 @@
-<?php include "/opt/lampp/htdocs/public_html/portfolio/template/header.php"; ?>
+<?php
+require '../core/init.php';
+require DIRROOT . "template/header.php";
+?>
 <header>
 
 </header>
@@ -10,8 +13,9 @@
         </div>
         <div class="about-main"></div>
     </section>
-    <section id="project">
+    <section id="my-project">
         <span class="span-index">project</span>
+        <div id="project"></div>
     </section>
     <section id="skils-learn">
         <section class="skills">
@@ -25,4 +29,4 @@
     </section>
 </main>
 
-<?php include "/opt/lampp/htdocs/public_html/portfolio/template/footer.php"; ?>
+<?php include DIRROOT . "template/footer.php"; ?>
