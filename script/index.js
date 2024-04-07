@@ -1,4 +1,5 @@
-const imgUrl = "http://localhost/public_html/portfolio/images/";
+const imgUrl = "https://johnvegagit.github.io/portfolio/images/";
+
 
 const userData = {
     name: "john vega",
@@ -23,7 +24,7 @@ function checkWindow() {
 checkWindow(addEventListener("resize", checkWindow));
 
 function showHeaderMobile() {
-    //const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
+    //const urlProfile = "https://johnvegagit.github.io/portfolio/images/profile/photo.jpg";
     const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
     document.querySelector("header").innerHTML = `
     <div class="profile">
@@ -38,7 +39,7 @@ function showHeaderMobile() {
 }
 
 function showHeaderDesktop() {
-    //const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
+    //const urlProfile = "https://johnvegagit.github.io/portfolio/images/profile/photo.jpg";
     const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
     document.querySelector("header").innerHTML = `
     <div class="profile">
