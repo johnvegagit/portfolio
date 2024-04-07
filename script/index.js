@@ -3,7 +3,7 @@ const imgUrl = "http://localhost/public_html/portfolio/images/";
 const userData = {
     name: "john vega",
     alt: "john vega photo",
-    url: imgUrl + "profile/photo.jpg",
+    url: "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4",
 };
 
 function checkWindow() {
@@ -23,7 +23,8 @@ function checkWindow() {
 checkWindow(addEventListener("resize", checkWindow));
 
 function showHeaderMobile() {
-    const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
+    //const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
+    const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
     document.querySelector("header").innerHTML = `
     <div class="profile">
         <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
@@ -37,7 +38,8 @@ function showHeaderMobile() {
 }
 
 function showHeaderDesktop() {
-    const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
+    //const urlProfile = "http://localhost/public_html/portfolio/images/profile/photo.jpg";
+    const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
     document.querySelector("header").innerHTML = `
     <div class="profile">
         <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
@@ -59,10 +61,10 @@ function showHeaderDesktop() {
 // About me...
 document.querySelector(".about-main").innerHTML = `
 <p>
-¡Hola! Soy John Wesley López Vega, un desarrollador web full-stack autodidacta con más de cuatro años de experiencia. Desde 2021, he estado inmerso en el fascinante mundo del desarrollo web, explorando tecnologías como JavaScript y PHP.
+¡Hola! Soy John Wesley López Vega, desarrollador de aplicaciones web (Web App Dev) autodidacta con más de cuatro años de experiencia. Desde 2021, he estado inmerso en el mundo del desarrollador de aplicaciones web (Web App Dev) , explorando tecnologías como JavaScript y PHP.
 </p>
 <p>
-Durante mi trayectoria, he trabajado en una variedad de proyectos personales que han sido fundamentales para mi desarrollo profesional. Estos proyectos no solo han consolidado mis habilidades técnicas, sino que también han demostrado mi capacidad para crear aplicaciones web funcionales y atractivas.
+Durante mi trayectoria, he trabajado en una variedad de proyectos personales que han sido fundamentales para mi desarrollo profesional. Estos proyectos no solo han consolidado mis habilidades técnicas, sino que también han demostrado mi capacidad para crear aplicaciones web funcionales.
 </p>
 <p>
 Actualmente, mi enfoque se centra en mejorar mis habilidades en la gestión de dependencias mediante el uso de Composer. Estoy convencido de que una gestión de dependencias eficiente es esencial para la productividad y el mantenimiento de proyectos a largo plazo.
@@ -71,10 +73,10 @@ Actualmente, mi enfoque se centra en mejorar mis habilidades en la gestión de d
 Además, me encuentro inmerso en el aprendizaje de la programación orientada a objetos en PHP. Reconozco la importancia de escribir código estructurado y reutilizable, y estoy comprometido en profundizar mis conocimientos en este ámbito.
 </p>
 <p>
-Por último, aunque no menos importante, me encanta explorar el mundo de Linux y su potencial en el desarrollo web. Actualmente, estoy familiarizándome con herramientas como BASH y NANO, las cuales me permiten trabajar de manera más eficiente y potenciar mis habilidades como desarrollador.
+Por último, me encanta explorar el mundo de Linux y su potencial en el desarrollador de aplicaciones web (Web App Dev). Actualmente, estoy familiarizándome con herramientas como BASH y NANO, las cuales me permiten trabajar de manera más eficiente y potenciar mis habilidades como desarrollador.
 </p>
 <p>
-Estoy emocionado por las oportunidades de colaboración en la industria del desarrollo web y estoy ansioso por seguir ampliando mis conocimientos y habilidades en este apasionante campo.
+Estoy emocionado por las oportunidades de colaboración en la industria del desarrollador de aplicaciones web (Web App Dev) y estoy ansioso por seguir ampliando mis conocimientos y habilidades en este apasionante campo.
 </p>
 `;
 
