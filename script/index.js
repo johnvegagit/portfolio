@@ -24,7 +24,6 @@ function checkWindow() {
 checkWindow(addEventListener("resize", checkWindow));
 
 function showHeaderMobile() {
-    //const urlProfile = "https://johnvegagit.github.io/portfolio/images/profile/photo.jpg";
     const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
     document.querySelector("header").innerHTML = `
     <div class="profile">
@@ -33,13 +32,12 @@ function showHeaderMobile() {
     </div>
     <div class="status-cvc">
         <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="#" class="download-cvc" download="" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
+        <a href="http://localhost/public_html/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
     </div>
     `;
 }
 
 function showHeaderDesktop() {
-    //const urlProfile = "https://johnvegagit.github.io/portfolio/images/profile/photo.jpg";
     const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
     document.querySelector("header").innerHTML = `
     <div class="profile">
@@ -54,7 +52,7 @@ function showHeaderDesktop() {
     </ul>
     <div class="status-cvc">
         <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="#" class="download-cvc" download="" title="descargar mi cv"><i class="bi bi-file-text"></i> cv</a> 
+        <a href="http://localhost/public_html/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
     </div>
     `;
 }
