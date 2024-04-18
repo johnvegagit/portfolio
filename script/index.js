@@ -32,7 +32,7 @@ function showHeaderMobile() {
     </div>
     <div class="status-cvc">
         <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="http://localhost/public_html/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
+        <a href="https://johnvegagit.github.io/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
     </div>
     `;
 }
@@ -52,7 +52,7 @@ function showHeaderDesktop() {
     </ul>
     <div class="status-cvc">
         <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="http://localhost/public_html/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
+        <a href="https://johnvegagit.github.io/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
     </div>
     `;
 }
