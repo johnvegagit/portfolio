@@ -190,17 +190,6 @@ const projects = [
         url: "https://github.com/johnvegagit/php-mvc-framework",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     },
-
-    {
-        title: "php login system (oop,mvc)",
-        url: "https://github.com/johnvegagit/php-login-system-oop-mvc",
-        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
-    },
-    {
-        title: "task management system (oop,mvc)",
-        url: "https://github.com/johnvegagit/Task-Management-System",
-        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
-    }
 ];
 
 let projectHTML = "";
