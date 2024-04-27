@@ -1,83 +1,52 @@
 const imgUrl = "https://johnvegagit.github.io/portfolio/images/";
+//const imgUrl = "http://localhost/public_html/portfolio/images/";
 
 
-const userData = {
-    name: "john vega",
-    alt: "john vega photo",
-    url: "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4",
+function showContent(evt, content) {
+    
+    let tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    let tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(content).style.display = "grid";
+    evt.currentTarget.className += " active";
+
 };
 
-function checkWindow() {
-    const windowWidth = window.innerWidth;
-    if (windowWidth <= 1000) {
-        showHeaderMobile();
-        document.querySelector("body").style.padding = "10px";
-        document.querySelector("main").style.paddingTop = "10px";
-        
-    } else {
-        showHeaderDesktop();
-        document.querySelector("body").style.padding = "40px";
-        document.querySelector("main").style.paddingTop = "40px";
+document.getElementById("defaultOpen").click();
+
+// project...
+const projects = [
+    {
+        title: "php mvc framework (oop,mvc)",
+        url: "https://github.com/johnvegagit/php-mvc-framework",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+    },
+    {
+        title: "php framework new version",
+        url: "https://github.com/johnvegagit/framework-v1",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     }
-}
+];
 
-checkWindow(addEventListener("resize", checkWindow));
-
-function showHeaderMobile() {
-    const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
-    document.querySelector("header").innerHTML = `
-    <div class="profile">
-        <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
-        <h2>${userData.name}</h2>
-    </div>
-    <div class="status-cvc">
-        <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="https://johnvegagit.github.io/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
-    </div>
+let projectHTML = "";
+for (let i = 0; i < projects.length; i++) {
+    const project = projects[i];
+    projectHTML += `
+        <div class="project-js">
+            <h2>${project.title}</h2>
+            <a href="${project.url}">${project.urlname}</a>
+        </div>
     `;
 }
-
-function showHeaderDesktop() {
-    const urlProfile = "https://avatars.githubusercontent.com/u/162820808?s=400&u=2148e58b6935ba2104ebf98f1d5385011543f090&v=4";
-    document.querySelector("header").innerHTML = `
-    <div class="profile">
-        <a class="profile-img" href="${urlProfile}" target="_blank" rel="noopener noreferrer"><img src="${userData.url}" alt="${userData.alt}" sizes="50w" width="50"></a>
-        <h2>${userData.name}</h2>
-    </div>
-    <ul id="nav-link-menu">
-        <li><a class="header-menu-link" href="https://github.com/johnvegagit" ><i class="bi bi-github"></i></a></li>
-        <li><a class="header-menu-link" href="https://www.linkedin.com/in/johnvegadev/" ><i class="bi bi-linkedin"></i></a></li>
-        <li><a class="header-menu-link" href="mailto:johnvegauser@gmail.com"><i class="bi bi-envelope-at-fill"></i></a>
-        </li>
-    </ul>
-    <div class="status-cvc">
-        <span class="current-status" title="Disponible para la chamba"> <span class="status-dot"></span> <i class="bi bi-briefcase-fill"></i> </span>
-        <a href="https://johnvegagit.github.io/portfolio/pdf/john-vega-cv.pdf" class="download-cvc" download="john-vega-cv.pdf" title="descargar mi cvc"><i class="bi bi-file-text"></i> cv</a> 
-    </div>
-    `;
-}
-
-// About me...
-document.querySelector(".about-main").innerHTML = `
-<p>
-¡Hola! Soy John Wesley López Vega, desarrollador de aplicaciones web (Web App Dev) autodidacta con más de cuatro años de experiencia. Desde 2021, he estado inmerso en el mundo del desarrollador de aplicaciones web (Web App Dev) , explorando tecnologías como JavaScript y PHP.
-</p>
-<p>
-Durante mi trayectoria, he trabajado en una variedad de proyectos personales que han sido fundamentales para mi desarrollo profesional. Estos proyectos no solo han consolidado mis habilidades técnicas, sino que también han demostrado mi capacidad para crear aplicaciones web funcionales.
-</p>
-<p>
-Actualmente, mi enfoque se centra en mejorar mis habilidades en la gestión de dependencias mediante el uso de Composer. Estoy convencido de que una gestión de dependencias eficiente es esencial para la productividad y el mantenimiento de proyectos a largo plazo.
-</p>
-<p>
-Además, me encuentro inmerso en el aprendizaje de la programación orientada a objetos en PHP. Reconozco la importancia de escribir código estructurado y reutilizable, y estoy comprometido en profundizar mis conocimientos en este ámbito.
-</p>
-<p>
-Por último, me encanta explorar el mundo de Linux y su potencial en el desarrollador de aplicaciones web (Web App Dev). Actualmente, estoy familiarizándome con herramientas como BASH y NANO, las cuales me permiten trabajar de manera más eficiente y potenciar mis habilidades como desarrollador.
-</p>
-<p>
-Estoy emocionado por las oportunidades de colaboración en la industria del desarrollador de aplicaciones web (Web App Dev) y estoy ansioso por seguir ampliando mis conocimientos y habilidades en este apasionante campo.
-</p>
-`;
+document.getElementById("project").innerHTML = projectHTML;
+document.getElementById("countPro").innerHTML = "(" + projects.length + ")";
 
 // My skills...
 const skillsObj = [
@@ -137,7 +106,8 @@ for (let i = 0; i < skillsObj.length; i++) {
         <span class="icon-span"><img src="${skills.url}" alt="${skills.alt}" sizes="20w">${skills.name}</span>
     `;
 }
-document.getElementById("skills").innerHTML = skillsHTML;
+
+document.getElementById("my-skills").innerHTML = skillsHTML;
 
 // I'm learning...
 const learningObj = [
@@ -179,29 +149,80 @@ for (let i = 0; i < learningObj.length; i++) {
         <span class="icon-span"><img src="${learn.url}" alt="${learn.alt}" sizes="20w">${learn.name}</span>
     `;
 }
-document.getElementById("learning").innerHTML = learningHTML;
+document.getElementById("my-learn").innerHTML = learningHTML;
 
-// project...
-const projects = [
+// I'm learning...
+const intresLearnObj = [
     {
-        title: "php mvc framework (oop,mvc)",
-        url: "https://github.com/johnvegagit/php-mvc-framework",
-        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+        name: "PYTHON",
+        alt: "PYTHON",
+        url: imgUrl + "icon/python.png",
     },
+
+    {
+        name: "MONGODB",
+        alt: "MONGODB",
+        url: imgUrl + "icon/mongodb.png",
+    },
+
+    {
+        name: "GRAHPQL",
+        alt: "GRAHPQL",
+        url: imgUrl + "icon/grahpql.png",
+    },
+
+    {
+        name: "DOCTRINE",
+        alt: "DOCTRINE",
+        url: imgUrl + "icon/doctrine.png",
+    },
+
+    {
+        name: "DOCKER",
+        alt: "DOCKER",
+        url: imgUrl + "icon/docker.png",
+    },
+
+    {
+        name: "KUBERNETES",
+        alt: "KUBERNETES",
+        url: imgUrl + "icon/kubernetes.png",
+    }
 ];
 
-let projectHTML = "";
-for (let i = 0; i < projects.length; i++) {
-    const project = projects[i];
-    projectHTML += `
-        <div class="project-js">
-            <h2>${project.title}</h2>
-            <a href="${project.url}">${project.urlname}</a>
-        </div>
+let intresLearnHTML = "";
+for (let i = 0; i < intresLearnObj.length; i++) {
+    const learn = intresLearnObj[i];
+    intresLearnHTML += ` 
+        <span class="icon-span"><img src="${learn.url}" alt="${learn.alt}" sizes="20w">${learn.name}</span>
     `;
 }
-document.getElementById("project").innerHTML = projectHTML;
+document.getElementById("my-exper").innerHTML = intresLearnHTML;
 
-// Get year for footer...
-const year = new Date().getFullYear();
-document.getElementById('year').textContent = year;
+// About me...
+document.getElementById("about").innerHTML = `
+<p>
+    ¡Hola! Soy John Wesley López Vega, desarrollador de aplicaciones web (Web App Dev) autodidacta con más de cuatro años
+    de experiencia. Desde 2021, he estado inmerso en el mundo del desarrollador de aplicaciones web (Web App Dev) , explorando tecnologías como JavaScript y PHP.
+</p>
+<p>
+    Durante mi trayectoria, he trabajado en una variedad de proyectos personales que han sido fundamentales para mi desarrollo profesional.
+    Estos proyectos no solo han consolidado mis habilidades técnicas, sino que también han demostrado mi capacidad para crear aplicaciones web funcionales.
+</p>
+<p>
+    Actualmente, mi enfoque se centra en mejorar mis habilidades en la gestión de dependencias mediante el uso de Composer.
+    Estoy convencido de que una gestión de dependencias eficiente es esencial para la productividad y el mantenimiento de proyectos a largo plazo.
+</p>
+<p>
+    Además, me encuentro inmerso en el aprendizaje de la programación orientada a objetos en PHP.
+    Reconozco la importancia de escribir código estructurado y reutilizable, y estoy comprometido en profundizar mis conocimientos en este ámbito.
+</p>
+<p>
+    Por último, me encanta explorar el mundo de Linux y su potencial en el desarrollador de aplicaciones web (Web App Dev).
+    Actualmente, estoy familiarizándome con herramientas como BASH y NANO, las cuales me permiten trabajar de manera más eficiente y potenciar mis habilidades como desarrollador.
+</p>
+<p>
+    Estoy emocionado por las oportunidades de colaboración en la industria del desarrollador de aplicaciones web (Web App Dev) y estoy ansioso por seguir ampliando mis
+    conocimientos y habilidades en este apasionante campo.
+</p>
+`;
