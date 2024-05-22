@@ -36,6 +36,11 @@ const projects = [
         title: "JavaScript drag drop",
         url: "https://github.com/johnvegagit/js-drag-drop",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+    },
+    {
+        title: "Search ajax php",
+        url: "https://github.com/johnvegagit/search-ajax-php",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     }
 ];
 
