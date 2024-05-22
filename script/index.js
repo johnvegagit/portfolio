@@ -1,7 +1,6 @@
 const imgUrl = "https://johnvegagit.github.io/portfolio/images/";
 //const imgUrl = "http://localhost/public_html/portfolio/images/";
 
-
 function showContent(evt, content) {
     
     let tabcontent = document.getElementsByClassName("tabcontent");
@@ -31,6 +30,11 @@ const projects = [
     {
         title: "php framework new version",
         url: "https://github.com/johnvegagit/framework-v1",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+    },
+    {
+        title: "JavaScript drag drop",
+        url: "https://github.com/johnvegagit/js-drag-drop",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     }
 ];
