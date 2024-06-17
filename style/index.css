@@ -234,7 +234,7 @@ footer{
     & .aurora{
         width: 340px;
         height: 340px;
-        background-color: #12492b;
+        /* background-color: #12492b; */
         filter: blur(350px);
         position: absolute;
         bottom: -200px;

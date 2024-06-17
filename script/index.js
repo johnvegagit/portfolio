@@ -23,25 +23,31 @@ document.getElementById("defaultOpen").click();
 // project...
 const projects = [
     {
-        title: "php mvc framework (oop,mvc)",
-        url: "https://github.com/johnvegagit/php-mvc-framework",
-        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
-    },
-    {
-        title: "php framework new version",
+        title: "PHP framework",
         url: "https://github.com/johnvegagit/framework-v1",
-        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
-    },
-    {
-        title: "JavaScript drag drop",
-        url: "https://github.com/johnvegagit/js-drag-drop",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
     },
     {
         title: "Search ajax php",
         url: "https://github.com/johnvegagit/search-ajax-php",
         urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
-    }
+    },
+    {
+        title: "Dinamic slide gallery js/php",
+        url: "https://github.com/johnvegagit/dinamic-slide-gallery",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+    },
+    {
+        title: "Data validation ajax/php",
+        url: "https://github.com/johnvegagit/ajax-data-valid",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+    },
+    {
+        title: "Password generator python",
+        url: "https://github.com/johnvegagit/python-pwd-generator",
+        urlname: "<i class='bi bi-github'></i> view project <i class='bi bi-arrow-up-right'></i>",
+    },
+    
 ];
 
 let projectHTML = "";
@@ -106,6 +112,12 @@ const skillsObj = [
         alt: "VS CODE",
         url: imgUrl + "icon/vscode.png",
     },
+
+    {
+        name: "COMPOSER",
+        alt: "COMPOSER",
+        url: imgUrl + "icon/composer.png",
+    },
 ];
 
 let skillsHTML = "";
@@ -127,18 +139,6 @@ const learningObj = [
     },
 
     {
-        name: "PHP OOP",
-        alt: "PHP OOP",
-        url: imgUrl + "icon/php.png",
-    },
-
-    {
-        name: "COMPOSER",
-        alt: "COMPOSER",
-        url: imgUrl + "icon/composer.png",
-    },
-
-    {
         name: "NANO",
         alt: "NANO",
         url: imgUrl + "icon/nano.png",
@@ -148,7 +148,13 @@ const learningObj = [
         name: "LINUX",
         alt: "LINUX",
         url: imgUrl + "icon/linux.png",
-    }
+    },
+
+    {
+        name: "PYTHON",
+        alt: "PYTHON",
+        url: imgUrl + "icon/python.png",
+    },
 ];
 
 let learningHTML = "";
@@ -160,30 +166,18 @@ for (let i = 0; i < learningObj.length; i++) {
 }
 document.getElementById("my-learn").innerHTML = learningHTML;
 
-// I'm learning...
+// I'm intres to learn...
 const intresLearnObj = [
     {
-        name: "PYTHON",
-        alt: "PYTHON",
-        url: imgUrl + "icon/python.png",
+        name: "VUEJS",
+        alt: "VUEJS",
+        url: imgUrl + "icon/vuejs.png",
     },
 
     {
-        name: "MONGODB",
-        alt: "MONGODB",
-        url: imgUrl + "icon/mongodb.png",
-    },
-
-    {
-        name: "GRAHPQL",
-        alt: "GRAHPQL",
-        url: imgUrl + "icon/grahpql.png",
-    },
-
-    {
-        name: "DOCTRINE",
-        alt: "DOCTRINE",
-        url: imgUrl + "icon/doctrine.png",
+        name: "SYMFONY",
+        alt: "SYMFONY",
+        url: imgUrl + "icon/symfony.png",
     },
 
     {
@@ -211,27 +205,33 @@ document.getElementById("my-exper").innerHTML = intresLearnHTML;
 // About me...
 document.getElementById("about").innerHTML = `
 <p>
-    ¡Hola! Soy John Wesley López Vega, desarrollador de aplicaciones web (Web App Dev) autodidacta con más de cuatro años
-    de experiencia. Desde 2021, he estado inmerso en el mundo del desarrollador de aplicaciones web (Web App Dev) , explorando tecnologías como JavaScript y PHP.
+    Hello! I'm John Wesley López Vega, a passionate web application developer with over four years of experience.
+    Since 2021, I have been dedicated to mastering the art of web development, focusing primarily on technologies like JavaScript and PHP.
 </p>
 <p>
-    Durante mi trayectoria, he trabajado en una variedad de proyectos personales que han sido fundamentales para mi desarrollo profesional.
-    Estos proyectos no solo han consolidado mis habilidades técnicas, sino que también han demostrado mi capacidad para crear aplicaciones web funcionales.
+    I chose to learn PHP due to its user-friendly nature and the convenience it offers for hosting web applications.
+    This decision has allowed me to build a solid foundation in web development, making the process both effective and enjoyable.
 </p>
 <p>
-    Actualmente, mi enfoque se centra en mejorar mis habilidades en la gestión de dependencias mediante el uso de Composer.
-    Estoy convencido de que una gestión de dependencias eficiente es esencial para la productividad y el mantenimiento de proyectos a largo plazo.
+    Throughout my journey, I have worked on a variety of personal projects that have significantly enhanced my skills.
+    These projects reflect my ability to create functional and efficient web applications, which are key to my professional development.
 </p>
 <p>
-    Además, me encuentro inmerso en el aprendizaje de la programación orientada a objetos en PHP.
-    Reconozco la importancia de escribir código estructurado y reutilizable, y estoy comprometido en profundizar mis conocimientos en este ámbito.
+    Currently, I'm expanding my horizons by learning Python, driven by my interest in cybersecurity.
+    I believe Python is a versatile and powerful language, making it an ideal gateway into the exciting world of cybersecurity.
 </p>
 <p>
-    Por último, me encanta explorar el mundo de Linux y su potencial en el desarrollador de aplicaciones web (Web App Dev).
-    Actualmente, estoy familiarizándome con herramientas como BASH y NANO, las cuales me permiten trabajar de manera más eficiente y potenciar mis habilidades como desarrollador.
+    In addition to web development, I have a strong interest in Linux and its potential.
+    I am exploring tools like BASH and NANO, which help me work more efficiently and enhance my development capabilities.
 </p>
 <p>
-    Estoy emocionado por las oportunidades de colaboración en la industria del desarrollador de aplicaciones web (Web App Dev) y estoy ansioso por seguir ampliando mis
-    conocimientos y habilidades en este apasionante campo.
+    I am also eager to deepen my knowledge in advanced technologies such as Symfony, Vue.js, Docker, and Kubernetes. 
+    I believe that mastering these tools is essential for developing large-scale, robust web applications.
+    Symfony provides a powerful framework for building complex applications, Vue.js offers flexibility and ease for creating dynamic user interfaces,
+    while Docker and Kubernetes facilitate seamless deployment and management of applications in diverse environments.
+</p>
+<p>
+    I am excited about the opportunity to collaborate with others in the web development industry and continually expand my knowledge and skills.
+    The world of technology is ever-evolving, and I am enthusiastic about being an active part of this dynamic field.
 </p>
 `;
