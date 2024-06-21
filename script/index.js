@@ -205,33 +205,19 @@ document.getElementById("my-exper").innerHTML = intresLearnHTML;
 // About me...
 document.getElementById("about").innerHTML = `
 <p>
-    Hello! I'm John Wesley López Vega, a passionate web application developer with over four years of experience.
-    Since 2021, I have been dedicated to mastering the art of web development, focusing primarily on technologies like JavaScript and PHP.
-</p>
-<p>
-    I chose to learn PHP due to its user-friendly nature and the convenience it offers for hosting web applications.
-    This decision has allowed me to build a solid foundation in web development, making the process both effective and enjoyable.
+    Self-taught web application developer with nearly two years of experience in JavaScript and PHP.
+    Learned programming through platforms like YouTube, W3Schools, and FreeCodeCamp.
+    Currently studying Python with a focus on cybersecurity, and exploring advanced technologies such as Symfony, Vue.js, Docker, and Kubernetes.
+    Proficient in Linux tools such as BASH and NANO. Enthusiastic about collaborating and continually expanding my skills in the dynamic field of technology.
 </p>
 <p>
     Throughout my journey, I have worked on a variety of personal projects that have significantly enhanced my skills.
     These projects reflect my ability to create functional and efficient web applications, which are key to my professional development.
 </p>
 <p>
-    Currently, I'm expanding my horizons by learning Python, driven by my interest in cybersecurity.
-    I believe Python is a versatile and powerful language, making it an ideal gateway into the exciting world of cybersecurity.
-</p>
-<p>
-    In addition to web development, I have a strong interest in Linux and its potential.
-    I am exploring tools like BASH and NANO, which help me work more efficiently and enhance my development capabilities.
-</p>
-<p>
     I am also eager to deepen my knowledge in advanced technologies such as Symfony, Vue.js, Docker, and Kubernetes. 
     I believe that mastering these tools is essential for developing large-scale, robust web applications.
     Symfony provides a powerful framework for building complex applications, Vue.js offers flexibility and ease for creating dynamic user interfaces,
     while Docker and Kubernetes facilitate seamless deployment and management of applications in diverse environments.
-</p>
-<p>
-    I am excited about the opportunity to collaborate with others in the web development industry and continually expand my knowledge and skills.
-    The world of technology is ever-evolving, and I am enthusiastic about being an active part of this dynamic field.
 </p>
 `;
